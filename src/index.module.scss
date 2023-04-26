@@ -1,0 +1,212 @@
+.container {
+  position: relative;
+  margin: 200px;
+  margin: 200px;
+  width: 636px;
+  height: 636px;
+}
+
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: center center;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+.centerIcon {
+  width: 50px;
+  height: 50px;
+  z-index: 300;
+  border: 1px solid #0A1F57;
+  border-radius: 50%;
+}
+
+.round1 {
+  width: 128px;
+  height: 128px;
+  border: 2px solid #666;
+  border-radius: 50%;
+  z-index: 200;
+  background-color: #fff;
+}
+
+.round2 {
+  width: 160px;
+  height: 160px;
+  z-index: 100;
+  background-color: #fff;
+  border: 2px solid #FF9A34;
+  border-radius: 50%;
+}
+
+.round3 {
+  width: 200px;
+  height: 200px;
+  border: 2px solid #f7caa0;
+  border-radius: 50%;
+}
+
+.inner,
+.outer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed #666;
+  border-radius: 50%;
+}
+
+
+.inner {
+  transform: translateX(-50%) translateY(-50%) rotate(45deg);
+  transform-origin: center center;
+  width: 628px;
+  height: 628px;
+
+  .lineRow,
+  .lineCol {
+    background-color: #366CFE;
+  }
+}
+
+.outer {
+  width: 900px;
+  height: 900px;
+  transform: translateX(-50%) translateY(-50%);
+
+  .lineRow,
+  .lineCol {
+    z-index: 150;
+    background-color: #0A1F57;
+  }
+}
+
+.lineRow,
+.lineCol {
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  z-index: -1;
+  background-color: #0A1F57;
+}
+
+.lineCol {
+  transform-origin: center center;
+  transform: translateX(-50%) translateY(-50%) rotate(90deg);
+}
+
+
+.tc,
+.lc,
+.bc,
+.rc,
+.tcm {
+  width: 0;
+  height: 0;
+  z-index: 300;
+  overflow: visible;
+  position: absolute;
+}
+
+
+.tcm {
+
+  top: 14.14%;
+  left: 14.14%;
+}
+
+.tc {
+  top: 0;
+  left: 50%;
+}
+
+
+.rc {
+  top: 50%;
+  right: 0;
+}
+
+.bc {
+  bottom: 0;
+  left: 50%;
+}
+
+.lc {
+  bottom: 50%;
+  left: 0;
+}
+
+
+.round {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border-radius: 50%;
+  transform: translateX(-50%) translateY(-50%);
+  transition-duration: 500ms;
+}
+
+
+
+
+.inner {
+  .round {
+    width: 36px;
+    height: 36px;
+    background: #366CFE;
+  }
+
+  .tcm .round {
+    background: #0A1F57;
+  }
+}
+
+.outer {
+  .round {
+    width: 45px;
+    height: 45px;
+    background: #0A1F57;
+  }
+}
+
+.active {
+  .round {
+    width: 120px;
+    height: 120px;
+    text-align: center;
+    font-size: 14px;
+    font-family: PingFangSC-Medium, PingFang SC;
+    font-weight: 500;
+    color: #FFFFFF;
+    line-height: 120px;
+    margin: 0;
+  }
+}
+
+.deactive {
+
+  .title {
+    top: 8px;
+    cursor: pointer;
+    position: absolute;
+  }
+
+  .textLeft {
+    .title {
+      left: 48px;
+    }
+  }
+
+  .textRight {
+    .title {
+      right: 48px;
+    }
+  }
+
+  &.block {
+
+    .title {
+      top: 18px;
+    }
+  }
+}
